@@ -22,7 +22,7 @@ class GamWindow:
         pygame.display.flip()
 
 class Detroit:
-    def __init__(self, color=THECOLORS['white'], left_px=10, width_px=98, speed_mps=1):
+    def __init__(self, color=THECOLORS['white'], left_px=10, width_px=26, height_px=98, speed_mps=1):
         self.color = color
         self.height_px = height_px
         self.top_px = game_window.height_px - self.height_px
@@ -109,7 +109,7 @@ def main():
 
     pygame.init()
     window_size_px = window_width_px, window_height_px = (950,120)
-    env = Environment(window_size_px, 1.5)
+    env = Environment(window_width_px, 1.5)
     game_window = GamWindow(window_size_px)
     air_track = AirTrack()
     air_track.make_some_cars(1)
